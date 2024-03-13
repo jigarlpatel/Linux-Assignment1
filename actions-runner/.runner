@@ -1,9 +1,0 @@
-﻿{
-  "agentId": 23,
-  "agentName": "jigarLinux",
-  "poolId": 1,
-  "poolName": "Default",
-  "serverUrl": "https://pipelinesghubeus11.actions.githubusercontent.com/8oGcM2X7nz1QRtYzWQ9pMIV9jtQq4v6OKwwdHFWp4u9u05PcsG/",
-  "gitHubUrl": "https://github.com/jigarlpatel/Linux-Assignment1",
-  "workFolder": "_work"
-}
