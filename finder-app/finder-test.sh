@@ -10,6 +10,10 @@ WRITESTR=AELD_IS_FUN
 WRITEDIR=/tmp/aeld-data
 username=$(cat conf/username.txt)
 
+echo "Compiling writer.c"
+make CROSS_COMPILE=aarch64-none-linux-gnu-gcc
+echo "Compiling writer.c complete"
+
 if [ $# -lt 3 ]
 then
 	echo "Using default value ${WRITESTR} for string to write"
@@ -52,9 +56,10 @@ fi
 #make clean
 #make
 
+echo "Now calling write bin file"
 for i in $( seq 1 $NUMFILES)
 do
-	./writer.sh "$WRITEDIR/${username}$i.txt" "$WRITESTR"
+	./writer "$WRITEDIR/${username}$i.txt" "$WRITESTR"
 done
 
 OUTPUTSTRING=$(./finder.sh "$WRITEDIR" "$WRITESTR")
