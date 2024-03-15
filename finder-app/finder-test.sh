@@ -10,9 +10,6 @@ WRITESTR=AELD_IS_FUN
 WRITEDIR=/tmp/aeld-data
 username=$(cat conf/username.txt)
 
-echo "Compiling writer.c"
-make CROSS_COMPILE=aarch64-none-linux-gnu-gcc
-echo "Compiling writer.c complete"
 
 if [ $# -lt 3 ]
 then
